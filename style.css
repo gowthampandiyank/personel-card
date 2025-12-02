@@ -1,3 +1,7 @@
+/* =========================================================
+   IMPORTS & ROOT VARIABLES
+========================================================= */
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 :root {
   /* LIGHT (default) */
@@ -22,7 +26,11 @@ body.dark-mode {
   --text-main: #f9fafb;
   --text-soft: #9ca3af;
 }
-/* ---------------- GLOBAL ---------------- */
+
+/* =========================================================
+   GLOBAL STYLES
+========================================================= */
+
 * {
   margin: 0;
   padding: 0;
@@ -38,15 +46,27 @@ body {
   background-color: var(--bg-main);
   padding: 20px;
 }
+
+/* =========================================================
+   CARD CONTAINER
+========================================================= */
+.header {
+  display: flex;
+  justify-content: center;
+  /* flex-direction: column; */
+  align-items: center;
+  background-color: var(--text-main);
+  padding: 15px;
+  overflow: hidden;
+  text-align: center;
+  gap: 8rm;
+  border-radius: 10px;
+}
 .profile_card {
   position: relative;
 }
 
 .card-toggle-btn {
-  position: absolute;
-  top: 30px;
-  right: 30px;
-
   width: 38px;
   height: 38px;
   border-radius: 50%;
@@ -72,25 +92,8 @@ body {
   transform: scale(1.1);
 }
 
-.header {
-  display: flex;
-
-  justify-content: center;
-  /* flex-direction: column; */
-  align-items: center;
-  background-color: var(--text-main);
-  padding: 15px;
-  overflow: hidden;
-  /* text-align: center; */
-  gap: 8rm;
-  border-radius: 10px;
-}
-
 /* ---------------- THEME BUTTON ---------------- */
 .theme-btn {
-  position: absolute;
-  top: 10px;
-  right: 20px;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -125,7 +128,7 @@ body.dark-mode {
   background-color: #020617 !important;
 }
 
-/* Card */
+/* Card Dark Mode */
 body.dark-mode .profile_card {
   background-color: #0f172a !important;
   box-shadow: 0 4px 25px rgba(255, 255, 255, 0.05);
@@ -142,7 +145,7 @@ body.dark-mode .profile_card .image {
   transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
-/* Texts */
+/* Texts drak mode */
 body.dark-mode .name {
   color: var(--bg-elevated) !important;
 }
@@ -157,13 +160,13 @@ body.dark-mode .footer span {
   color: #f3f4f6 !important;
 }
 
-/* Social icons */
+/* Social icons Dark Mode */
 body.dark-mode .social_media a {
   background-color: #1e293b !important;
   color: #fff !important;
 }
 
-/* Buttons */
+/* Buttons Dark Mode */
 body.dark-mode .buttons a {
   background-color: var(--accent) !important;
 }
@@ -188,7 +191,7 @@ body.dark-mode .social_media a {
   transition: 0.3s;
 }
 
-/* Facebook */
+/* Facebook Dark Mode */
 
 body.dark-mode .social_media a:nth-child(1) {
   color: #1877f2 !important; /* soft navy */
@@ -200,7 +203,7 @@ body.dark-mode .social_media a:nth-child(1):hover {
   color: #f4f4f4 !important; /* sky blue icon */
 }
 
-/* instagram */
+/* instagram Dark Mode */
 
 body.dark-mode .social_media a:nth-child(2) {
   color: var(--accent) !important; /* soft navy */
@@ -212,7 +215,7 @@ body.dark-mode .social_media a:nth-child(2):hover {
   color: #f4f4f4 !important; /* sky blue icon */
 }
 
-/* linkdin */
+/* linkdin  Dark Mode */
 
 body.dark-mode .social_media a:nth-child(3) {
   color: var(--accent-strong) !important; /* soft navy */
@@ -224,7 +227,7 @@ body.dark-mode .social_media a:nth-child(3):hover {
   color: #f4f4f4 !important; /* sky blue icon */
 }
 
-/* github */
+/* github Dark Mode */
 
 body.dark-mode .social_media a:nth-child(4) {
   color: var(--card-bg) !important; /* soft navy */
